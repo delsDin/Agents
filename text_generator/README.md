@@ -1,10 +1,11 @@
 # 🤖 Text Générateur
 
-Ce projet est une application de génération de texte basée sur l'intelligence artificielle. Elle utilise le modèle **Llama 3.2 (1b)** via l'outil **Ollama** pour produire du contenu textuel à partir de prompts fournis par l'utilisateur.
+Ce projet est une application de génération de texte basée sur l'intelligence artificielle. Elle utilise le modèle **Llama 3.2 (1b)** en local ou des modèles plus puissants via le **Cloud Ollama** pour produire du contenu textuel à partir de prompts fournis par l'utilisateur.
 
-Le projet propose deux manières d'interagir avec le modèle :
-1.  **API REST** avec FastAPI.
-2.  **Interface Graphique (Web)** avec Gradio.
+Le projet propose trois manières d'interagir avec le modèle :
+1.  **API REST Locale** avec FastAPI.
+2.  **API REST Cloud** avec FastAPI (SDK Ollama).
+3.  **Interface Graphique (Web)** avec Gradio.
 
 ## 🚀 Prérequis
 
@@ -29,7 +30,13 @@ uvicorn app:app --reload
 ```
 L'API sera accessible sur `http://127.0.0.1:8000`. Vous pouvez tester le point de terminaison `/generate/` via la documentation interactive à `http://127.0.0.1:8000/docs`.
 
-### 2. Version Interface Web (Gradio)
+### 2. Version API Cloud (FastAPI + SDK Ollama)
+Nécessite une clé API Ollama Cloud.
+```bash
+OLLAMA_API_KEY="votre_cle" uvicorn app_cloud:app --reload
+```
+
+### 3. Version Interface Web (Gradio)
 Pour lancer l'interface graphique :
 ```bash
 python main.py
@@ -49,6 +56,7 @@ Ce générateur de texte peut être utilisé dans de nombreux scénarios :
 
 ## 📂 Structure du projet
 
--   `app.py` : Serveur FastAPI exposant l'API de génération.
+-   `app.py` : Serveur FastAPI pour la génération locale.
+-   `app_cloud.py` : Serveur FastAPI pour la génération via le Cloud.
 -   `main.py` : Interface utilisateur web construite avec Gradio.
 -   `requirements.txt` : Liste des bibliothèques Python requises.
