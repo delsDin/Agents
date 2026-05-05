@@ -19,7 +19,13 @@ Un agent qui corrige l'orthographe et la grammaire tout en fournissant des expli
 -   **Technologies** : FastAPI, Gradio, Ollama (Llama 3.2:3b), Ollama Cloud.
 -   **Fonctionnalités** : Correction textuelle, explications détaillées, support Cloud.
 
+### 4. [Extracteur NER (ner)](./ner/README.md)
+Un agent capable d'extraire les entités nommées (personnes, lieux, organisations) d'un texte.
+-   **Technologies** : FastAPI, Gradio, Ollama (Llama 3.2:1b), Ollama Cloud.
+-   **Fonctionnalités** : Identification d'entités, structuration de données, support Cloud.
+
 ## 🛠️ Configuration Globale
+
 
 
 ### Prérequis
@@ -39,3 +45,12 @@ pip install -r requirements.txt
 Chaque dossier contient ses propres scripts de lancement. Reportez-vous aux README spécifiques pour plus de détails.
 -   **API** : `uvicorn app:app --reload` (dans le dossier de l'agent)
 -   **Web UI** : `python main.py` ou `python <nom_du_script>.py`
+
+---
+---
+---
+
+*Notice : Commentaires auto par IA*
+---
+---
+---

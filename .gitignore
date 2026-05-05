@@ -29,7 +29,7 @@ env/
 ENV/
 .env
 .venv_agent
-.gradio
+*.gradio
 
 # IDE
 .vscode/
