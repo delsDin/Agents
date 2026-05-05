@@ -19,10 +19,10 @@ Ce projet propose deux interfaces (une API et une interface graphique) pour rés
 
 ## 📦 Installation
 
-Installez les dépendances nécessaires :
+Installez les dépendances nécessaires en utilisant le fichier `requirements.txt` :
 
 ```bash
-pip install fastapi uvicorn requests gradio
+pip install -r requirements.txt
 ```
 
 ## 📋 Utilisation
