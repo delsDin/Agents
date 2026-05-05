@@ -16,9 +16,16 @@ def extract_named_entities(text):
     str: Les entités nommées extraites du texte.
     """
 
-    # Création d'un prompt pour la requête à l'API d'Ollama
-    # Le prompt demande d'extraire toutes les entités nommées du texte donné
-    prompt = f"Extrait toutes les entités nommées (personnes, organisations, lieu, monnaie, quantité, dates) s'ils y en a avec une liste à puces du texte suivant :\n\n{text}"
+    # Prompt optimisé pour une extraction structurée et précise
+    prompt = (
+        "Tu es un expert en extraction d'entités nommées. Analyse le texte ci-dessous et extrait "
+        "UNIQUEMENT les entités suivantes : PERSONNE, ORGANISATION, LIEU, DATE, MONNAIE, QUANTITÉ.\n\n"
+        "Règles :\n"
+        "1. Présente le résultat sous forme de liste à puces classée par catégorie.\n"
+        "2. Ne fais aucun commentaire supplémentaire.\n"
+        "3. Si aucune entité n'est trouvée, réponds : 'Aucune entité détectée.'\n\n"
+        f"Texte à analyser :\n{text}"
+    )
     
     # Définition du payload pour la requête POST à l'API d'Ollama
     payload = {

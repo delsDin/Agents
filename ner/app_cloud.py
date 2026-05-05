@@ -19,8 +19,16 @@ def generate_text(text: str):
     Utilise des modèles plus massifs pour une meilleure précision d'extraction.
     """
     
-    # Construction du prompt demandant une extraction précise
-    full_prompt = f"Extrait toutes les entités nommées (personnes, organisations, lieu, monnaie, quantité, dates) s'ils y en a avec une liste à puces du texte suivant :\n\n{text}"
+    # Prompt optimisé pour une extraction structurée et précise via le Cloud
+    full_prompt = (
+        "Tu es un expert en extraction d'entités nommées. Analyse le texte ci-dessous et extrait "
+        "UNIQUEMENT les entités suivantes : PERSONNE, ORGANISATION, LIEU, DATE, MONNAIE, QUANTITÉ.\n\n"
+        "Règles :\n"
+        "1. Présente le résultat sous forme de liste à puces classée par catégorie.\n"
+        "2. Ne fais aucun commentaire supplémentaire.\n"
+        "3. Si aucune entité n'est trouvée, réponds : 'Aucune entité détectée.'\n\n"
+        f"Texte à analyser :\n{text}"
+    )
 
     try:
         # Appel au modèle Cloud (ex: gpt-oss:120b) via le client Python officiel
