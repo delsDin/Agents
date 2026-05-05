@@ -1,4 +1,4 @@
-# 🤖 UDEMY AI Agents Collection
+# 🤖 AI Agents Collection
 
 Ce dépôt regroupe plusieurs projets d'agents d'intelligence artificielle développés dans le cadre d'une formation Udemy. Chaque projet explore une facette différente de l'utilisation des modèles de langage (LLM) locaux avec **Ollama**.
 
