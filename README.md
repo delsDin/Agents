@@ -24,6 +24,11 @@ Un agent capable d'extraire les entités nommées (personnes, lieux, organisatio
 -   **Technologies** : FastAPI, Gradio, Ollama (Llama 3.2:1b), Ollama Cloud.
 -   **Fonctionnalités** : Identification d'entités, structuration de données, support Cloud.
 
+### 5. [Analyseur de Sentiment (sentiment_analyzer)](./sentiment_analyzer/README.md)
+Un agent spécialisé dans l'analyse de sentiment, attribuant un score de satisfaction sur 10.
+-   **Technologies** : FastAPI, Gradio, Ollama (Llama 3.2:1b), Ollama Cloud.
+-   **Fonctionnalités** : Évaluation de tonalité, notation numérique, support Cloud.
+
 ## 🛠️ Configuration Globale
 
 
