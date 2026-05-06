@@ -18,8 +18,13 @@ def generate_text(text: str):
     
     
     prompt = (
-        f"Tu es un expert en analyse de sentiment. Donne un score /10 du texte suivant :\n\n{text}"
-    )
+        f"Tu es un expert en analyse de sentiment. Analyse le texte ci-dessous et fournis un score de sentiment sur 10 (0 = très négatif, 5 = neutre, 10 = très positif).\n\n"
+        f"Format de réponse attendu :\n"
+        f"Score : [Note]/10\n"
+        f"Sentiment : [Positif/Neutre/Négatif]\n"
+        f"Explication : [Courte justification]\n\n"
+        f"Texte : {text}"
+     )
 
     try:
         # Appel au modèle Cloud (ex: gpt-oss:120b) via le client Python officiel

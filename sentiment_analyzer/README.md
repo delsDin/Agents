@@ -46,4 +46,11 @@ OLLAMA_API_KEY="votre_cle_api" uvicorn app_cloud:app --reload
 ```
 
 ## 📝 Exemple de Prompt utilisé
-> "Tu es un expert en analyse de sentiment. Donne un score /10 du texte suivant : [TEXTE]"
+> "Tu es un expert en analyse de sentiment. Analyse le texte ci-dessous et fournis un score de sentiment sur 10 (0 = très négatif, 5 = neutre, 10 = très positif).
+>
+> Format de réponse attendu :
+> Score : [Note]/10
+> Sentiment : [Positif/Neutre/Négatif]
+> Explication : [Courte justification]
+>
+> Texte : [TEXTE]"
