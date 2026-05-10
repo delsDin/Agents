@@ -29,6 +29,11 @@ Un agent spécialisé dans l'analyse de sentiment, attribuant un score de satisf
 -   **Technologies** : FastAPI, Gradio, Ollama (Llama 3.2:1b), Ollama Cloud.
 -   **Fonctionnalités** : Évaluation de tonalité, notation numérique, support Cloud.
 
+### 6. [Chatbot d'Entreprise (chatbot)](./chatbot/README.md)
+Un assistant virtuel nommé "Assiste" capable de répondre aux questions sur une entreprise (Acme Corp).
+-   **Technologies** : FastAPI, Gradio, Ollama (gpt-oss:120b-cloud).
+-   **Fonctionnalités** : Support client automatisé, FAQ interactive, interface amicale.
+
 ## 🛠️ Configuration Globale
 
 
