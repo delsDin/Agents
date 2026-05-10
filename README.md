@@ -34,6 +34,11 @@ Un assistant virtuel nommé "Assiste" capable de répondre aux questions sur une
 -   **Technologies** : FastAPI, Gradio, Ollama (gpt-oss:120b-cloud).
 -   **Fonctionnalités** : Support client automatisé, FAQ interactive, interface amicale.
 
+### 7. [Assistant Personnel Vocal (assistant)](./assistant/README.md)
+Un assistant personnel avec synthèse vocale et reconnaissance de commandes.
+-   **Technologies** : Gradio, SpeechRecognition, pyttsx3, Ollama.
+-   **Fonctionnalités** : Interaction vocale (STT/TTS), réponses parlées, interface web.
+
 ## 🛠️ Configuration Globale
 
 
